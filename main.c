@@ -1,12 +1,68 @@
 #include <stdio.h>
 #include "mini_shell.h"
-//TODO shell loop
-//TODO input parsing
-//TODO commands (the built-ins) cd, pwd, echo, env, setenv, unsetenv, which, exit
-//TODO external commands
-//TODO external variables
-//TODO path managing
-//TODO error handling
+// TODO: Shell lifecycle
+//  - initialize shell state
+//  - main REPL loop
+//  - graceful exit handling
+
+// TODO: Input handling
+//  - read input (getline)
+//  - handle EOF (Ctrl+D)
+//  - ignore empty / whitespace-only input
+
+// TODO: Lexer / Parser
+//  - split input into tokens
+//  - handle quotes and escapes
+//  - build argv-style command structures
+
+// TODO: Built-in commands
+//  - cd
+//  - pwd
+//  - echo
+//  - env
+//  - setenv / unsetenv
+//  - which
+//  - exit
+
+// TODO: External commands
+//  - fork / execve
+//  - PATH resolution
+//  - wait for child processes
+
+// TODO: Environment variables
+//  - copy envp into internal structure
+//  - variable expansion ($VAR, $?)
+
+// TODO: Redirections
+//  - input (<)
+//  - output (>)
+//  - append (>>)
+
+// TODO: Pipes
+//  - create pipelines with |
+//  - manage file descriptors
+
+// TODO: Job control
+//  - background execution (&)
+//  - job list
+//  - fg / bg
+
+// TODO: Signals
+//  - SIGINT (Ctrl+C)
+//  - SIGQUIT
+//  - SIGTSTP
+
+// TODO: Exit status tracking
+//  - store last command status ($?)
+
+// TODO: Error handling
+//  - command not found
+//  - permission denied
+//  - syntax errors
+
+// TODO: Memory management
+//  - free all resources per loop
+//  - avoid leaks in long-running shell
 
 void shell_loop(char** env){
     char* input = NULL;
